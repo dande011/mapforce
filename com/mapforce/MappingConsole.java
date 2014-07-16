@@ -63,7 +63,7 @@ public class MappingConsole {
 			// MappingMapToText_fileObject.setCloseObjectsAfterRun(false);
 
 			{
-				com.altova.io.Input orderexport_334_5578868232Source = com.altova.io.StreamInput.createInput("//MAILSERVER2/Users/DavidAnderson/Documents/MAILING/00 ONLINE ORDERS/orderexport_6417_256298516.xml");
+				com.altova.io.Input orderexport_334_5578868232Source = com.altova.io.StreamInput.createInput("//WEBSERVER/WS_Order_XML/Job Order/orderexport_8461_525355050.xml");
 
 				MappingMapToText_fileObject.run(
 						orderexport_334_5578868232Source);
