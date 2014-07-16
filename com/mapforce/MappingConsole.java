@@ -20,6 +20,13 @@ public class MappingConsole {
 
 	public static void main(String[] args) {
 		System.out.println("Mapping Application");
+		for (String argTest : args)
+		{
+			System.out.print("argument: ");
+			System.out.println(argTest);
+		}
+		//temp
+		String directory = "NULL in MappingConsole main";
 
 
 		try { // Mapping
@@ -63,7 +70,7 @@ public class MappingConsole {
 			// MappingMapToText_fileObject.setCloseObjectsAfterRun(false);
 
 			{
-				com.altova.io.Input orderexport_334_5578868232Source = com.altova.io.StreamInput.createInput("//WEBSERVER/WS_Order_XML/Job Order/orderexport_8461_525355050.xml");
+				com.altova.io.Input orderexport_334_5578868232Source = com.altova.io.StreamInput.createInput(directory);
 
 				MappingMapToText_fileObject.run(
 						orderexport_334_5578868232Source);
