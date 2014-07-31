@@ -41,8 +41,11 @@ public class Text_file_TypeInfo
 	public static final int _altova_ti_altova_anyURI = 11 ;
 	public static final int _altova_ti_altova_unnamedType = 12 ;
 	public static final int _altova_ti_altova_RowsType = 13 ;
-	public static final int _altova_ti_altova_stringType = 14 ;
-	public static final int _altova_til = 15 ;
+	public static final int _altova_ti_altova_Column13Type = 14 ;
+	public static final int _altova_ti_altova_Column13Type2 = 15 ;
+	public static final int _altova_ti_altova_Column2Type = 16 ;
+	public static final int _altova_ti_altova_Column2Type2 = 17 ;
+	public static final int _altova_til = 18 ;
 
 
 
@@ -129,15 +132,35 @@ public class Text_file_TypeInfo
 
 	public static class _altova_mi_altova_RowsType {
 		public static final int begin = _altova_mi_altova_unnamedType.end ;
-		public static final int _Field1 = _altova_mi_altova_RowsType.begin ;
-		public static final int end = 2 ;
+		public static final int _Column13 = _altova_mi_altova_RowsType.begin ;
+		public static final int _Column2 = 2 ;
+		public static final int end = 3 ;
 	};
 
 
-	public static class _altova_mi_altova_stringType {
+	public static class _altova_mi_altova_Column13Type {
 		public static final int begin = _altova_mi_altova_RowsType.end ;
-		public static final int _unnamed = _altova_mi_altova_stringType.begin ;
-		public static final int end = 3 ;
+		public static final int end = _altova_mi_altova_Column13Type.begin ;
+	};
+
+
+	public static class _altova_mi_altova_Column13Type2 {
+		public static final int begin = _altova_mi_altova_Column13Type.end ;
+		public static final int _unnamed = _altova_mi_altova_Column13Type2.begin ;
+		public static final int end = 4 ;
+	};
+
+
+	public static class _altova_mi_altova_Column2Type {
+		public static final int begin = _altova_mi_altova_Column13Type2.end ;
+		public static final int end = _altova_mi_altova_Column2Type.begin ;
+	};
+
+
+	public static class _altova_mi_altova_Column2Type2 {
+		public static final int begin = _altova_mi_altova_Column2Type.end ;
+		public static final int _unnamed = _altova_mi_altova_Column2Type2.begin ;
+		public static final int end = 5 ;
 	};
 
 	
@@ -178,13 +201,26 @@ public class Text_file_TypeInfo
 			types[11] = new TypeInfo( binder, _altova_ni, "anyURI", _altova_ti_altova_any, _altova_mi_altova_anyURI.begin, _altova_mi_altova_anyURI.end,  null, 				WhitespaceType.Whitespace_Unknown );
 			types[12] = new TypeInfo( binder, _altova_ni, "", 0, _altova_mi_altova_unnamedType.begin, _altova_mi_altova_unnamedType.end,  null, 				WhitespaceType.Whitespace_Unknown );
 			types[13] = new TypeInfo( binder, _altova_ni, "", 0, _altova_mi_altova_RowsType.begin, _altova_mi_altova_RowsType.end,  null, 				WhitespaceType.Whitespace_Unknown );
-			types[14] = new TypeInfo( binder, _altova_ni, "", 0, _altova_mi_altova_stringType.begin, _altova_mi_altova_stringType.end,  null, 				WhitespaceType.Whitespace_Unknown, com.altova.text.Xs.AnySimpleTypeFormatter );
+			types[14] = new TypeInfo( binder, _altova_ni, "", _altova_ti_altova_string2, _altova_mi_altova_Column13Type.begin, _altova_mi_altova_Column13Type.end,  
+				new FacetInfo[]
+				{
+					new FacetInfo (null, "length", "15", 15 ), 
+				},
+				WhitespaceType.Whitespace_Unknown, com.altova.text.Xs.AnySimpleTypeFormatter );
+			types[15] = new TypeInfo( binder, _altova_ni, "", 0, _altova_mi_altova_Column13Type2.begin, _altova_mi_altova_Column13Type2.end,  null, 				WhitespaceType.Whitespace_Unknown, com.altova.text.Xs.AnySimpleTypeFormatter );
+			types[16] = new TypeInfo( binder, _altova_ni, "", _altova_ti_altova_string2, _altova_mi_altova_Column2Type.begin, _altova_mi_altova_Column2Type.end,  
+				new FacetInfo[]
+				{
+					new FacetInfo (null, "length", "60", 60 ), 
+				},
+				WhitespaceType.Whitespace_Unknown, com.altova.text.Xs.AnySimpleTypeFormatter );
+			types[17] = new TypeInfo( binder, _altova_ni, "", 0, _altova_mi_altova_Column2Type2.begin, _altova_mi_altova_Column2Type2.end,  null, 				WhitespaceType.Whitespace_Unknown, com.altova.text.Xs.AnySimpleTypeFormatter );
 
 		}
 
 		public TypeInfo[] createTypes(InfoBinderInterface binder) {
 
-			TypeInfo types[] = new TypeInfo[15];
+			TypeInfo types[] = new TypeInfo[18];
 
 			initTypes0(binder, types);
 			
@@ -201,15 +237,18 @@ public class Text_file_TypeInfo
 		private void initMembers0(InfoBinderInterface binder, MemberInfo[] members) {
 			members[0] = new MemberInfo (binder, "", "Rows", _altova_ti_altova_unnamedType, _altova_ti_altova_RowsType, 0, 0, -1);
 
-			members[1] = new MemberInfo (binder, "", "Field1", _altova_ti_altova_RowsType, _altova_ti_altova_stringType, 0, 0, 1);
+			members[1] = new MemberInfo (binder, "", "Column13", _altova_ti_altova_RowsType, _altova_ti_altova_Column13Type2, 0, 0, 1);
+			members[2] = new MemberInfo (binder, "", "Column2", _altova_ti_altova_RowsType, _altova_ti_altova_Column2Type2, 0, 0, 1);
 
-			members[2] = new MemberInfo (binder, "", "", _altova_ti_altova_stringType, _altova_ti_altova_string2, 0|MemberInfo.IS_ATTRIBUTE, 1, 1);
+			members[3] = new MemberInfo (binder, "", "", _altova_ti_altova_Column13Type2, _altova_ti_altova_Column13Type, 0|MemberInfo.IS_ATTRIBUTE, 1, 1);
+
+			members[4] = new MemberInfo (binder, "", "", _altova_ti_altova_Column2Type2, _altova_ti_altova_Column2Type, 0|MemberInfo.IS_ATTRIBUTE, 1, 1);
 
 		}
 
 		public MemberInfo[] createMembers(InfoBinderInterface binder) {
 
-			MemberInfo members[] = new MemberInfo[3];
+			MemberInfo members[] = new MemberInfo[5];
 
 			initMembers0(binder, members);
 			

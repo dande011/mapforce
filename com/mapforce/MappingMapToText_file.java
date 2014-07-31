@@ -27,11 +27,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	
 	static class main implements IEnumerable
 	{
-		com.altova.mapforce.IMFNode var1_instance_orderexport_334_557886823;
+		java.lang.String var1_InputFilename;
 	
-		public main(com.altova.mapforce.IMFNode var1_instance_orderexport_334_557886823)
+		public main(java.lang.String var1_InputFilename)
 		{
-			this.var1_instance_orderexport_334_557886823 = var1_instance_orderexport_334_557886823;
+			this.var1_InputFilename = var1_InputFilename;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -42,7 +42,8 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int state = 2;
 			Object current;
 			main closure;
-			com.altova.mapforce.IEnumerable var2_filter_elements_qname;
+			com.altova.mapforce.IEnumerable var2_if_is_filename_with_wildcard;
+			com.altova.mapforce.IMFNode var3_webservice;
 			public Enumerator(main closure) 
 			{
 				this.closure = closure;
@@ -59,15 +60,44 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					switch (state) 
 					{
 					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
+					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
  					}
 				}
 				return false;
 			}
 
 			private boolean moveNext_2() throws Exception {
+				state = 3;				
+				var2_if_is_filename_with_wildcard = new com.altova.functions.Core.SequenceCache((new seq1_if_is_filename_with_wildcard(closure.var1_InputFilename)));
+				var3_webservice = com.altova.xml.InternalXML.callWebservice(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), com.altova.functions.Core.box(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), com.altova.functions.Core.box(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("SubmitOrder", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq2_seq_(var2_if_is_filename_with_wildcard))))))), "EPMS_Connect", "SubmitOrder", com.altova.functions.Lang.stringAsQName("{http://localhost/EnterpriseWebService/Enterprise Connect}SubmitOrder"), "http://localhost/EnterpriseWebService/Enterprise Connect/SubmitOrder", "http://sqlserver/EnterpriseWebService/service.asmx", "document", "", "", 0, "", "", 2);
+				current = com.altova.functions.Core.createElement("Rows", (new seq26_join(var3_webservice)));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 4;				
+				current = com.altova.functions.Core.createElement("Rows", (new seq29_join(var2_if_is_filename_with_wildcard)));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 5;				
+				current = com.altova.functions.Core.createElement("Rows", (new seq31_join(var2_if_is_filename_with_wildcard)));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_5() throws Exception {
+				state = 6;				
+				current = com.altova.functions.Core.createElement("Rows", (new seq33_join(var2_if_is_filename_with_wildcard)));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_6() throws Exception {
 				state = 0;				
-				var2_filter_elements_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_instance_orderexport_334_557886823));
-				current = (com.altova.mapforce.IMFNode)com.altova.functions.Core.first((new seq1_webservice(var2_filter_elements_qname)));
+				current = com.altova.functions.Core.createElement("Rows", (new seq35_join(var3_webservice)));
 				pos++;
 				return true;
 			}
@@ -85,13 +115,13 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq1_webservice implements IEnumerable
+	static class seq1_if_is_filename_with_wildcard implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		java.lang.String var1_InputFilename;
 	
-		public seq1_webservice(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq1_if_is_filename_with_wildcard(java.lang.String var1_InputFilename)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_InputFilename = var1_InputFilename;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -101,11 +131,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq1_webservice closure;
-			com.altova.mapforce.IMFNode var2_webservice;
-			IEnumerator var3_filter_elements_qname;
-			IEnumerator var4_filter_elements_qname;
-			public Enumerator(seq1_webservice closure) 
+			seq1_if_is_filename_with_wildcard closure;
+			IEnumerator var2_resolve_filename;
+			com.altova.mapforce.IMFNode var4_instance;
+			com.altova.mapforce.IMFNode var3_instance;
+			public Enumerator(seq1_if_is_filename_with_wildcard closure) 
 			{
 				this.closure = closure;
 			}
@@ -124,40 +154,43 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					case 2:	if (moveNext_2()) return true; break;
 					case 3:	if (moveNext_3()) return true; break;
 					case 4:	if (moveNext_4()) return true; break;
-					case 5:	if (moveNext_5()) return true; break;
  					}
 				}
 				return false;
 			}
 
 			private boolean moveNext_1() throws Exception {
-				state = 2;				
-				var2_webservice = com.altova.xml.InternalXML.callWebservice(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), com.altova.functions.Core.box(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), com.altova.functions.Core.box(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("SubmitOrder", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq2_seq_(closure.var1_filter_elements_qname))))))), "EPMS_Connect", "SubmitOrder", com.altova.functions.Lang.stringAsQName("{http://localhost/EnterpriseWebService/Enterprise Connect}SubmitOrder"), "http://localhost/EnterpriseWebService/Enterprise Connect/SubmitOrder", "http://sqlserver/EnterpriseWebService/service.asmx", "document", "", "", 0, "", "", 2);
-				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Fault", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), var2_webservice)))))).enumerator();
+				state = 3;				
+				if (!(com.mapforce.core.is_filename_with_wildcard.eval(closure.var1_InputFilename))) {state = 2; return false; }
+				var2_resolve_filename = (com.altova.functions.Core.resolveFilename(closure.var1_InputFilename)).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
-				state = 4;				
-				if (!var3_filter_elements_qname.moveNext()) {state = 3; return false; }
-				var4_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("detail", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())))).enumerator();
-				return false;
+				state = 0;				
+				{
+							com.altova.io.Input file = com.altova.io.StreamInput.createInput(closure.var1_InputFilename);
+							var4_instance = new com.altova.xml.DOMDocumentAsMFNodeAdapter(XmlTreeOperations.loadDocument(file), file.getFilename());
+							file.close();
+				}
+				current = var4_instance;
+				pos++;
+				return true;
 			}
 			private boolean moveNext_3() throws Exception {
-				state = 0;				
-				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
-				current = com.altova.functions.Core.resultDocument(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), var2_webservice))))), "", (new seq26_map(var2_webservice)));
+				state = 3;				
+				if (!var2_resolve_filename.moveNext()) {state = 4; return false; }
+				{
+							com.altova.io.Input file = com.altova.io.StreamInput.createInput(((java.lang.String)(var2_resolve_filename.current())));
+							var3_instance = new com.altova.xml.DOMDocumentAsMFNodeAdapter(XmlTreeOperations.loadDocument(file), file.getFilename());
+							file.close();
+				}
+				current = var3_instance;
 				pos++;
 				return true;
 			}
 			private boolean moveNext_4() throws Exception {
-				state = 4;				
-				if (!var4_filter_elements_qname.moveNext()) {state = 5; return false; }
-				com.altova.functions.Core.throwUserException(com.altova.CoreTypes.nodeToString(((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
-				return false;
-			}
-			private boolean moveNext_5() throws Exception {
-				state = 2;				
-				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
+				state = 0;				
+				var2_resolve_filename.close(); var2_resolve_filename = null;
 				return false;
 			}
 
@@ -166,8 +199,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
-				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
-				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
+				var2_resolve_filename.close(); var2_resolve_filename = null;
 				}
 				catch (Exception e)
 				{
@@ -178,11 +210,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq2_seq_ implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
 	
-		public seq2_seq_(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq2_seq_(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -223,7 +255,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			}
 			private boolean moveNext_2() throws Exception {
 				state = 0;				
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Order", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq4_join(closure.var1_filter_elements_qname)));
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Order", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq4_join(closure.var1_if_is_filename_with_wildcard)));
 				pos++;
 				return true;
 			}
@@ -306,11 +338,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq4_join implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
 	
-		public seq4_join(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq4_join(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -321,13 +353,18 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int state = 1;
 			Object current;
 			seq4_join closure;
-			IEnumerator var2_filter;
+			IEnumerator var2_if_is_filename_with_wildcard;
 			IEnumerator var3_filter;
-			IEnumerator var4_filter;
+			IEnumerator var4_if_is_filename_with_wildcard;
 			IEnumerator var5_filter;
-			IEnumerator var6_filter;
-			IEnumerator var7_group_by;
-			com.altova.mapforce.IEnumerable var8_group_items;
+			IEnumerator var6_if_is_filename_with_wildcard;
+			IEnumerator var7_filter;
+			IEnumerator var8_if_is_filename_with_wildcard;
+			IEnumerator var9_filter;
+			IEnumerator var10_if_is_filename_with_wildcard;
+			IEnumerator var11_filter;
+			IEnumerator var12_group_by;
+			com.altova.mapforce.IEnumerable var13_group_items;
 			public Enumerator(seq4_join closure) 
 			{
 				this.closure = closure;
@@ -346,18 +383,28 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					case 1:	if (moveNext_1()) return true; break;
 					case 2:	if (moveNext_2()) return true; break;
 					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
 					case 5:	if (moveNext_5()) return true; break;
-					case 6:	if (moveNext_6()) return true; break;
+					case 7:	if (moveNext_7()) return true; break;
 					case 8:	if (moveNext_8()) return true; break;
 					case 9:	if (moveNext_9()) return true; break;
-					case 11:	if (moveNext_11()) return true; break;
+					case 10:	if (moveNext_10()) return true; break;
 					case 12:	if (moveNext_12()) return true; break;
+					case 13:	if (moveNext_13()) return true; break;
 					case 14:	if (moveNext_14()) return true; break;
 					case 15:	if (moveNext_15()) return true; break;
 					case 17:	if (moveNext_17()) return true; break;
 					case 18:	if (moveNext_18()) return true; break;
 					case 19:	if (moveNext_19()) return true; break;
 					case 20:	if (moveNext_20()) return true; break;
+					case 22:	if (moveNext_22()) return true; break;
+					case 23:	if (moveNext_23()) return true; break;
+					case 24:	if (moveNext_24()) return true; break;
+					case 25:	if (moveNext_25()) return true; break;
+					case 27:	if (moveNext_27()) return true; break;
+					case 28:	if (moveNext_28()) return true; break;
+					case 29:	if (moveNext_29()) return true; break;
+					case 30:	if (moveNext_30()) return true; break;
  					}
 				}
 				return false;
@@ -365,97 +412,152 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter = ((new seq5_filter(closure.var1_filter_elements_qname))).enumerator();
+				var2_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
-				state = 2;				
-				if (!var2_filter.moveNext()) {state = 3; return false; }
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("CustAccount", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("AccountField1", ""), ((com.altova.mapforce.IMFNode)(var2_filter.current()))))))))))))));
-				pos++;
-				return true;
-			}
-			private boolean moveNext_3() throws Exception {
-				state = 5;				
-				var2_filter.close(); var2_filter = null;
-				var3_filter = ((new seq6_filter(closure.var1_filter_elements_qname))).enumerator();
+				state = 4;				
+				if (!var2_if_is_filename_with_wildcard.moveNext()) {state = 3; return false; }
+				var3_filter = ((new seq5_filter(((com.altova.mapforce.IMFNode)(var2_if_is_filename_with_wildcard.current()))))).enumerator();
 				return false;
 			}
-			private boolean moveNext_5() throws Exception {
-				state = 5;				
-				if (!var3_filter.moveNext()) {state = 6; return false; }
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("JobDescription", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("Numerator", ""), ((com.altova.mapforce.IMFNode)(var3_filter.current()))))), "  "), "Order ID# "), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderID", ""), ((com.altova.mapforce.IMFNode)(var3_filter.current())))))))))))))));
+			private boolean moveNext_3() throws Exception {
+				state = 7;				
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				var4_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
+				return false;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 4;				
+				if (!var3_filter.moveNext()) {state = 5; return false; }
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("CustAccount", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("AccountField1", ""), ((com.altova.mapforce.IMFNode)(var3_filter.current()))))))))))))));
 				pos++;
 				return true;
 			}
-			private boolean moveNext_6() throws Exception {
-				state = 8;				
+			private boolean moveNext_5() throws Exception {
+				state = 2;				
 				var3_filter.close(); var3_filter = null;
-				var4_filter = ((new seq8_filter(closure.var1_filter_elements_qname))).enumerator();
+				return false;
+			}
+			private boolean moveNext_7() throws Exception {
+				state = 9;				
+				if (!var4_if_is_filename_with_wildcard.moveNext()) {state = 8; return false; }
+				var5_filter = ((new seq6_filter(((com.altova.mapforce.IMFNode)(var4_if_is_filename_with_wildcard.current()))))).enumerator();
 				return false;
 			}
 			private boolean moveNext_8() throws Exception {
-				state = 8;				
-				if (!var4_filter.moveNext()) {state = 9; return false; }
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("DueDate", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.DateTimeToString(com.altova.CoreTypes.parseDateTime(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("RequiredDateISO", ""), ((com.altova.mapforce.IMFNode)(var4_filter.current())))))))));
-				pos++;
-				return true;
-			}
-			private boolean moveNext_9() throws Exception {
-				state = 11;				
-				var4_filter.close(); var4_filter = null;
-				var5_filter = ((new seq9_filter(closure.var1_filter_elements_qname))).enumerator();
+				state = 12;				
+				var4_if_is_filename_with_wildcard.close(); var4_if_is_filename_with_wildcard = null;
+				var6_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
 				return false;
 			}
-			private boolean moveNext_11() throws Exception {
-				state = 11;				
-				if (!var5_filter.moveNext()) {state = 12; return false; }
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("OrderDate", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.DateTimeToString(com.altova.CoreTypes.parseDateTime(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderDateISO", ""), ((com.altova.mapforce.IMFNode)(var5_filter.current())))))))));
+			private boolean moveNext_9() throws Exception {
+				state = 9;				
+				if (!var5_filter.moveNext()) {state = 10; return false; }
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("JobDescription", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.functions.Core.concat(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("Numerator", ""), ((com.altova.mapforce.IMFNode)(var5_filter.current()))))), "  "), "Order ID# "), com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderID", ""), ((com.altova.mapforce.IMFNode)(var5_filter.current())))))))))))))));
 				pos++;
 				return true;
+			}
+			private boolean moveNext_10() throws Exception {
+				state = 7;				
+				var5_filter.close(); var5_filter = null;
+				return false;
 			}
 			private boolean moveNext_12() throws Exception {
 				state = 14;				
-				var5_filter.close(); var5_filter = null;
-				var6_filter = ((new seq10_filter(closure.var1_filter_elements_qname))).enumerator();
+				if (!var6_if_is_filename_with_wildcard.moveNext()) {state = 13; return false; }
+				var7_filter = ((new seq8_filter(((com.altova.mapforce.IMFNode)(var6_if_is_filename_with_wildcard.current()))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_13() throws Exception {
+				state = 17;				
+				var6_if_is_filename_with_wildcard.close(); var6_if_is_filename_with_wildcard = null;
+				var8_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
 				return false;
 			}
 			private boolean moveNext_14() throws Exception {
 				state = 14;				
-				if (!var6_filter.moveNext()) {state = 15; return false; }
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("FormNumber", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderField3", ""), ((com.altova.mapforce.IMFNode)(var6_filter.current())))))));
+				if (!var7_filter.moveNext()) {state = 15; return false; }
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("DueDate", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.DateTimeToString(com.altova.CoreTypes.parseDateTime(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("RequiredDateISO", ""), ((com.altova.mapforce.IMFNode)(var7_filter.current())))))))));
 				pos++;
 				return true;
 			}
 			private boolean moveNext_15() throws Exception {
-				state = 17;				
-				var6_filter.close(); var6_filter = null;
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("UserDefinedField5", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box("Online Internet Order"));
-				pos++;
-				return true;
+				state = 12;				
+				var7_filter.close(); var7_filter = null;
+				return false;
 			}
 			private boolean moveNext_17() throws Exception {
-				state = 18;				
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Components", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq11_join(closure.var1_filter_elements_qname)));
-				pos++;
-				return true;
+				state = 19;				
+				if (!var8_if_is_filename_with_wildcard.moveNext()) {state = 18; return false; }
+				var9_filter = ((new seq9_filter(((com.altova.mapforce.IMFNode)(var8_if_is_filename_with_wildcard.current()))))).enumerator();
+				return false;
 			}
 			private boolean moveNext_18() throws Exception {
-				state = 19;				
-				var7_group_by = (com.altova.functions.Core.groupBy((new seq14_join(closure.var1_filter_elements_qname)), (new seq15_cond_box_lambda()))).enumerator();
+				state = 22;				
+				var8_if_is_filename_with_wildcard.close(); var8_if_is_filename_with_wildcard = null;
+				var10_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
 				return false;
 			}
 			private boolean moveNext_19() throws Exception {
 				state = 19;				
-				if (!var7_group_by.moveNext()) {state = 20; return false; }
-				var8_group_items = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.groupItems(((com.altova.functions.Core.Group)(var7_group_by.current()))));
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Shipments", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Shipment", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq16_join(var8_group_items)))));
+				if (!var9_filter.moveNext()) {state = 20; return false; }
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("OrderDate", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.DateTimeToString(com.altova.CoreTypes.parseDateTime(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderDateISO", ""), ((com.altova.mapforce.IMFNode)(var9_filter.current())))))))));
 				pos++;
 				return true;
 			}
 			private boolean moveNext_20() throws Exception {
+				state = 17;				
+				var9_filter.close(); var9_filter = null;
+				return false;
+			}
+			private boolean moveNext_22() throws Exception {
+				state = 24;				
+				if (!var10_if_is_filename_with_wildcard.moveNext()) {state = 23; return false; }
+				var11_filter = ((new seq10_filter(((com.altova.mapforce.IMFNode)(var10_if_is_filename_with_wildcard.current()))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_23() throws Exception {
+				state = 27;				
+				var10_if_is_filename_with_wildcard.close(); var10_if_is_filename_with_wildcard = null;
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("UserDefinedField5", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box("Online Internet Order"));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_24() throws Exception {
+				state = 24;				
+				if (!var11_filter.moveNext()) {state = 25; return false; }
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("FormNumber", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderField3", ""), ((com.altova.mapforce.IMFNode)(var11_filter.current())))))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_25() throws Exception {
+				state = 22;				
+				var11_filter.close(); var11_filter = null;
+				return false;
+			}
+			private boolean moveNext_27() throws Exception {
+				state = 28;				
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Components", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq11_join(closure.var1_if_is_filename_with_wildcard)));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_28() throws Exception {
+				state = 29;				
+				var12_group_by = (com.altova.functions.Core.groupBy((new seq14_join(closure.var1_if_is_filename_with_wildcard)), (new seq15_cond_box_lambda()))).enumerator();
+				return false;
+			}
+			private boolean moveNext_29() throws Exception {
+				state = 29;				
+				if (!var12_group_by.moveNext()) {state = 30; return false; }
+				var13_group_items = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.groupItems(((com.altova.functions.Core.Group)(var12_group_by.current()))));
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Shipments", "http://localhost/EnterpriseWebService/Enterprise Connect"), com.altova.functions.Core.box(com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Shipment", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq16_join(var13_group_items)))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_30() throws Exception {
 				state = 0;				
-				var7_group_by.close(); var7_group_by = null;
+				var12_group_by.close(); var12_group_by = null;
 				return false;
 			}
 
@@ -464,12 +566,17 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
-				var2_filter.close(); var2_filter = null;
 				var3_filter.close(); var3_filter = null;
-				var4_filter.close(); var4_filter = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
 				var5_filter.close(); var5_filter = null;
-				var6_filter.close(); var6_filter = null;
-				var7_group_by.close(); var7_group_by = null;
+				var4_if_is_filename_with_wildcard.close(); var4_if_is_filename_with_wildcard = null;
+				var7_filter.close(); var7_filter = null;
+				var6_if_is_filename_with_wildcard.close(); var6_if_is_filename_with_wildcard = null;
+				var9_filter.close(); var9_filter = null;
+				var8_if_is_filename_with_wildcard.close(); var8_if_is_filename_with_wildcard = null;
+				var11_filter.close(); var11_filter = null;
+				var10_if_is_filename_with_wildcard.close(); var10_if_is_filename_with_wildcard = null;
+				var12_group_by.close(); var12_group_by = null;
 				}
 				catch (Exception e)
 				{
@@ -480,11 +587,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq5_filter implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IMFNode var1_current;
 	
-		public seq5_filter(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq5_filter(com.altova.mapforce.IMFNode var1_current)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_current = var1_current;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -521,7 +628,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
@@ -554,11 +661,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq6_filter implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IMFNode var1_current;
 	
-		public seq6_filter(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq6_filter(com.altova.mapforce.IMFNode var1_current)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_current = var1_current;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -595,7 +702,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter = ((new seq7_filter(closure.var1_filter_elements_qname))).enumerator();
+				var2_filter = ((new seq7_filter(closure.var1_current))).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
@@ -628,11 +735,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq7_filter implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IMFNode var1_current;
 	
-		public seq7_filter(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq7_filter(com.altova.mapforce.IMFNode var1_current)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_current = var1_current;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -669,7 +776,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
@@ -702,11 +809,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq8_filter implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IMFNode var1_current;
 	
-		public seq8_filter(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq8_filter(com.altova.mapforce.IMFNode var1_current)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_current = var1_current;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -743,7 +850,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
@@ -776,11 +883,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq9_filter implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IMFNode var1_current;
 	
-		public seq9_filter(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq9_filter(com.altova.mapforce.IMFNode var1_current)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_current = var1_current;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -817,7 +924,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
@@ -850,11 +957,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq10_filter implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IMFNode var1_current;
 	
-		public seq10_filter(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq10_filter(com.altova.mapforce.IMFNode var1_current)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_current = var1_current;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -891,7 +998,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
@@ -924,11 +1031,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq11_join implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
 	
-		public seq11_join(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq11_join(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -939,14 +1046,15 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int state = 1;
 			Object current;
 			seq11_join closure;
-			IEnumerator var2_filter_elements_qname;
+			IEnumerator var2_if_is_filename_with_wildcard;
 			IEnumerator var3_filter_elements_qname;
-			com.altova.mapforce.IEnumerable var4_filter_attributes_qname;
+			IEnumerator var4_filter_elements_qname;
 			com.altova.mapforce.IEnumerable var5_filter_attributes_qname;
 			com.altova.mapforce.IEnumerable var6_filter_attributes_qname;
 			com.altova.mapforce.IEnumerable var7_filter_attributes_qname;
 			com.altova.mapforce.IEnumerable var8_filter_attributes_qname;
 			com.altova.mapforce.IEnumerable var9_filter_attributes_qname;
+			com.altova.mapforce.IEnumerable var10_filter_attributes_qname;
 			public Enumerator(seq11_join closure) 
 			{
 				this.closure = closure;
@@ -967,6 +1075,8 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					case 3:	if (moveNext_3()) return true; break;
 					case 4:	if (moveNext_4()) return true; break;
 					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
+					case 7:	if (moveNext_7()) return true; break;
  					}
 				}
 				return false;
@@ -974,36 +1084,47 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
 				state = 4;				
-				if (!var2_filter_elements_qname.moveNext()) {state = 3; return false; }
-				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("job", ""), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current())))).enumerator();
+				if (!var2_if_is_filename_with_wildcard.moveNext()) {state = 3; return false; }
+				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), ((com.altova.mapforce.IMFNode)(var2_if_is_filename_with_wildcard.current())))).enumerator();
 				return false;
 			}
 			private boolean moveNext_3() throws Exception {
 				state = 0;				
-				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
 				return false;
 			}
 			private boolean moveNext_4() throws Exception {
-				state = 4;				
+				state = 6;				
 				if (!var3_filter_elements_qname.moveNext()) {state = 5; return false; }
-				var4_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("totalNoTax", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current()))));
-				var5_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("TemplateRefCode", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current()))));
-				var6_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("TemplateSubject", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current()))));
-				var7_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("copies", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current()))));
-				var8_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("Numerator", ""), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current()))));
-				var9_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("templateName", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current()))));
-				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Component", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq12_join(var8_filter_attributes_qname, ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())), var5_filter_attributes_qname, var9_filter_attributes_qname, var7_filter_attributes_qname, var6_filter_attributes_qname, var4_filter_attributes_qname)));
-				pos++;
-				return true;
+				var4_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("job", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())))).enumerator();
+				return false;
 			}
 			private boolean moveNext_5() throws Exception {
 				state = 2;				
 				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
+				return false;
+			}
+			private boolean moveNext_6() throws Exception {
+				state = 6;				
+				if (!var4_filter_elements_qname.moveNext()) {state = 7; return false; }
+				var5_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("totalNoTax", ""), ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				var6_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("TemplateRefCode", ""), ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				var7_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("TemplateSubject", ""), ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				var8_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("copies", ""), ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				var9_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("Numerator", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current()))));
+				var10_filter_attributes_qname = new com.altova.functions.Core.SequenceCache(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("templateName", ""), ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				current = com.altova.functions.Core.createElement(com.altova.functions.Core.createQName("Component", "http://localhost/EnterpriseWebService/Enterprise Connect"), (new seq12_join(var9_filter_attributes_qname, ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current())), var6_filter_attributes_qname, var10_filter_attributes_qname, var8_filter_attributes_qname, var7_filter_attributes_qname, var5_filter_attributes_qname)));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_7() throws Exception {
+				state = 4;				
+				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
 				return false;
 			}
 
@@ -1012,8 +1133,9 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
+				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
 				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
-				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
 				}
 				catch (Exception e)
 				{
@@ -1229,11 +1351,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class seq14_join implements IEnumerable
 	{
-		com.altova.mapforce.IEnumerable var1_filter_elements_qname;
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
 	
-		public seq14_join(com.altova.mapforce.IEnumerable var1_filter_elements_qname)
+		public seq14_join(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
 		{
-			this.var1_filter_elements_qname = var1_filter_elements_qname;
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -1244,9 +1366,10 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int state = 1;
 			Object current;
 			seq14_join closure;
-			IEnumerator var2_filter_elements_qname;
+			IEnumerator var2_if_is_filename_with_wildcard;
 			IEnumerator var3_filter_elements_qname;
 			IEnumerator var4_filter_elements_qname;
+			IEnumerator var5_filter_elements_qname;
 			public Enumerator(seq14_join closure) 
 			{
 				this.closure = closure;
@@ -1269,6 +1392,8 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					case 5:	if (moveNext_5()) return true; break;
 					case 6:	if (moveNext_6()) return true; break;
 					case 7:	if (moveNext_7()) return true; break;
+					case 8:	if (moveNext_8()) return true; break;
+					case 9:	if (moveNext_9()) return true; break;
  					}
 				}
 				return false;
@@ -1276,24 +1401,24 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter_elements_qname = (closure.var1_filter_elements_qname).enumerator();
+				var2_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
 				state = 4;				
-				if (!var2_filter_elements_qname.moveNext()) {state = 3; return false; }
-				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("job", ""), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current())))).enumerator();
+				if (!var2_if_is_filename_with_wildcard.moveNext()) {state = 3; return false; }
+				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), ((com.altova.mapforce.IMFNode)(var2_if_is_filename_with_wildcard.current())))).enumerator();
 				return false;
 			}
 			private boolean moveNext_3() throws Exception {
 				state = 0;				
-				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
 				return false;
 			}
 			private boolean moveNext_4() throws Exception {
 				state = 6;				
 				if (!var3_filter_elements_qname.moveNext()) {state = 5; return false; }
-				var4_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("shipping", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())))).enumerator();
+				var4_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("job", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())))).enumerator();
 				return false;
 			}
 			private boolean moveNext_5() throws Exception {
@@ -1302,15 +1427,26 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 				return false;
 			}
 			private boolean moveNext_6() throws Exception {
-				state = 6;				
+				state = 8;				
 				if (!var4_filter_elements_qname.moveNext()) {state = 7; return false; }
-				current = var4_filter_elements_qname.current();
-				pos++;
-				return true;
+				var5_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("shipping", ""), ((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current())))).enumerator();
+				return false;
 			}
 			private boolean moveNext_7() throws Exception {
 				state = 4;				
 				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
+				return false;
+			}
+			private boolean moveNext_8() throws Exception {
+				state = 8;				
+				if (!var5_filter_elements_qname.moveNext()) {state = 9; return false; }
+				current = var5_filter_elements_qname.current();
+				pos++;
+				return true;
+			}
+			private boolean moveNext_9() throws Exception {
+				state = 6;				
+				var5_filter_elements_qname.close(); var5_filter_elements_qname = null;
 				return false;
 			}
 
@@ -1319,9 +1455,10 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
+				var5_filter_elements_qname.close(); var5_filter_elements_qname = null;
 				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
 				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
-				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
 				}
 				catch (Exception e)
 				{
@@ -2256,13 +2393,13 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq26_map implements IEnumerable
+	static class seq26_join implements IEnumerable
 	{
-		com.altova.mapforce.IMFNode var1_result;
+		com.altova.mapforce.IMFNode var1_webservice;
 	
-		public seq26_map(com.altova.mapforce.IMFNode var1_result)
+		public seq26_join(com.altova.mapforce.IMFNode var1_webservice)
 		{
-			this.var1_result = var1_result;
+			this.var1_webservice = var1_webservice;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -2272,9 +2409,12 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq26_map closure;
-			IEnumerator var2_filter;
-			public Enumerator(seq26_map closure) 
+			seq26_join closure;
+			com.altova.mapforce.IMFNode var2_webservice;
+			IEnumerator var3_filter_elements_qname;
+			IEnumerator var4_filter_elements_qname;
+			IEnumerator var5_filter;
+			public Enumerator(seq26_join closure) 
 			{
 				this.closure = closure;
 			}
@@ -2292,6 +2432,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					case 1:	if (moveNext_1()) return true; break;
 					case 2:	if (moveNext_2()) return true; break;
 					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
+					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
+					case 7:	if (moveNext_7()) return true; break;
+					case 8:	if (moveNext_8()) return true; break;
  					}
 				}
 				return false;
@@ -2299,19 +2444,49 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_filter = ((new seq27_filter(closure.var1_result))).enumerator();
-				return false;
-			}
-			private boolean moveNext_2() throws Exception {
-				state = 2;				
-				if (!var2_filter.moveNext()) {state = 3; return false; }
-				current = com.altova.functions.Core.createElement("Rows", (new seq29_cond_box(((com.altova.mapforce.IMFNode)(var2_filter.current())))));
+				current = com.altova.functions.Core.createElement("Column13", com.altova.functions.Core.box("Result:"));
 				pos++;
 				return true;
 			}
+			private boolean moveNext_2() throws Exception {
+				state = 3;				
+				var2_webservice = closure.var1_webservice;
+				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Fault", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), var2_webservice)))))).enumerator();
+				return false;
+			}
 			private boolean moveNext_3() throws Exception {
+				state = 5;				
+				if (!var3_filter_elements_qname.moveNext()) {state = 4; return false; }
+				var4_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("detail", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())))).enumerator();
+				return false;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 7;				
+				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
+				var5_filter = ((new seq27_filter(var2_webservice))).enumerator();
+				return false;
+			}
+			private boolean moveNext_5() throws Exception {
+				state = 5;				
+				if (!var4_filter_elements_qname.moveNext()) {state = 6; return false; }
+				com.altova.functions.Core.throwUserException(com.altova.CoreTypes.nodeToString(((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				return false;
+			}
+			private boolean moveNext_6() throws Exception {
+				state = 3;				
+				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
+				return false;
+			}
+			private boolean moveNext_7() throws Exception {
+				state = 7;				
+				if (!var5_filter.moveNext()) {state = 8; return false; }
+				current = com.altova.functions.Core.createElement("Column2", com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Message", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), ((com.altova.mapforce.IMFNode)(var5_filter.current())))))))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_8() throws Exception {
 				state = 0;				
-				var2_filter.close(); var2_filter = null;
+				var5_filter.close(); var5_filter = null;
 				return false;
 			}
 
@@ -2320,7 +2495,9 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
-				var2_filter.close(); var2_filter = null;
+				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
+				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
+				var5_filter.close(); var5_filter = null;
 				}
 				catch (Exception e)
 				{
@@ -2378,7 +2555,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			private boolean moveNext_2() throws Exception {
 				state = 2;				
 				if (!var2_filter.moveNext()) {state = 3; return false; }
-				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("JobNumber", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), ((com.altova.mapforce.IMFNode)(var2_filter.current())))))))) {state = 2; return false; }
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Message", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), ((com.altova.mapforce.IMFNode)(var2_filter.current())))))))) {state = 2; return false; }
 				current = var2_filter.current();
 				pos++;
 				return true;
@@ -2477,13 +2654,13 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 		}
 				
 	}
-	static class seq29_cond_box implements IEnumerable
+	static class seq29_join implements IEnumerable
 	{
-		com.altova.mapforce.IMFNode var1_current;
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
 	
-		public seq29_cond_box(com.altova.mapforce.IMFNode var1_current)
+		public seq29_join(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
 		{
-			this.var1_current = var1_current;
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -2493,8 +2670,10 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int pos = 0;
 			int state = 1;
 			Object current;
-			seq29_cond_box closure;
-			public Enumerator(seq29_cond_box closure) 
+			seq29_join closure;
+			IEnumerator var2_if_is_filename_with_wildcard;
+			IEnumerator var3_filter;
+			public Enumerator(seq29_join closure) 
 			{
 				this.closure = closure;
 			}
@@ -2510,17 +2689,49 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 					switch (state) 
 					{
 					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
+					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
  					}
 				}
 				return false;
 			}
 
 			private boolean moveNext_1() throws Exception {
-				state = 0;				
-				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Message", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), closure.var1_current)))))) {state = 0; return false; }
-				current = com.altova.functions.Core.createElement("Field1", com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Message", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), closure.var1_current)))))));
+				state = 2;				
+				current = com.altova.functions.Core.createElement("Column13", com.altova.functions.Core.box("Date Ordered:"));
 				pos++;
 				return true;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 3;				
+				var2_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
+				return false;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 5;				
+				if (!var2_if_is_filename_with_wildcard.moveNext()) {state = 4; return false; }
+				var3_filter = ((new seq30_filter(((com.altova.mapforce.IMFNode)(var2_if_is_filename_with_wildcard.current()))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 0;				
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				return false;
+			}
+			private boolean moveNext_5() throws Exception {
+				state = 5;				
+				if (!var3_filter.moveNext()) {state = 6; return false; }
+				current = com.altova.functions.Core.createElement("Column2", com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderDate", ""), ((com.altova.mapforce.IMFNode)(var3_filter.current())))))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_6() throws Exception {
+				state = 3;				
+				var3_filter.close(); var3_filter = null;
+				return false;
 			}
 
 			
@@ -2528,6 +2739,681 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
+				var3_filter.close(); var3_filter = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq30_filter implements IEnumerable
+	{
+		com.altova.mapforce.IMFNode var1_current;
+	
+		public seq30_filter(com.altova.mapforce.IMFNode var1_current)
+		{
+			this.var1_current = var1_current;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq30_filter closure;
+			IEnumerator var2_filter_elements_qname;
+			public Enumerator(seq30_filter closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
+				return false;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 2;				
+				if (!var2_filter_elements_qname.moveNext()) {state = 3; return false; }
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderDate", ""), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current())))))) {state = 2; return false; }
+				current = var2_filter_elements_qname.current();
+				pos++;
+				return true;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 0;				
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq31_join implements IEnumerable
+	{
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
+	
+		public seq31_join(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
+		{
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq31_join closure;
+			IEnumerator var2_if_is_filename_with_wildcard;
+			IEnumerator var3_filter;
+			public Enumerator(seq31_join closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
+					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				current = com.altova.functions.Core.createElement("Column13", com.altova.functions.Core.box("Order Number:"));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 3;				
+				var2_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
+				return false;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 5;				
+				if (!var2_if_is_filename_with_wildcard.moveNext()) {state = 4; return false; }
+				var3_filter = ((new seq32_filter(((com.altova.mapforce.IMFNode)(var2_if_is_filename_with_wildcard.current()))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 0;				
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				return false;
+			}
+			private boolean moveNext_5() throws Exception {
+				state = 5;				
+				if (!var3_filter.moveNext()) {state = 6; return false; }
+				current = com.altova.functions.Core.createElement("Column2", com.altova.functions.Core.box(com.altova.CoreTypes.integerToString(com.altova.CoreTypes.longToInteger(com.altova.CoreTypes.intToLong(com.altova.CoreTypes.longToInt(com.altova.CoreTypes.integerToLong(com.altova.CoreTypes.decimalToInteger(com.altova.CoreTypes.parseDecimal(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderID", ""), ((com.altova.mapforce.IMFNode)(var3_filter.current()))))))))))))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_6() throws Exception {
+				state = 3;				
+				var3_filter.close(); var3_filter = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var3_filter.close(); var3_filter = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq32_filter implements IEnumerable
+	{
+		com.altova.mapforce.IMFNode var1_current;
+	
+		public seq32_filter(com.altova.mapforce.IMFNode var1_current)
+		{
+			this.var1_current = var1_current;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq32_filter closure;
+			IEnumerator var2_filter_elements_qname;
+			public Enumerator(seq32_filter closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
+				return false;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 2;				
+				if (!var2_filter_elements_qname.moveNext()) {state = 3; return false; }
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("OrderID", ""), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current())))))) {state = 2; return false; }
+				current = var2_filter_elements_qname.current();
+				pos++;
+				return true;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 0;				
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq33_join implements IEnumerable
+	{
+		com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard;
+	
+		public seq33_join(com.altova.mapforce.IEnumerable var1_if_is_filename_with_wildcard)
+		{
+			this.var1_if_is_filename_with_wildcard = var1_if_is_filename_with_wildcard;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq33_join closure;
+			IEnumerator var2_if_is_filename_with_wildcard;
+			IEnumerator var3_filter;
+			public Enumerator(seq33_join closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
+					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				current = com.altova.functions.Core.createElement("Column13", com.altova.functions.Core.box("Customer Name:"));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 3;				
+				var2_if_is_filename_with_wildcard = (closure.var1_if_is_filename_with_wildcard).enumerator();
+				return false;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 5;				
+				if (!var2_if_is_filename_with_wildcard.moveNext()) {state = 4; return false; }
+				var3_filter = ((new seq34_filter(((com.altova.mapforce.IMFNode)(var2_if_is_filename_with_wildcard.current()))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 0;				
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				return false;
+			}
+			private boolean moveNext_5() throws Exception {
+				state = 5;				
+				if (!var3_filter.moveNext()) {state = 6; return false; }
+				current = com.altova.functions.Core.createElement("Column2", com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("CompanyName", ""), ((com.altova.mapforce.IMFNode)(var3_filter.current())))))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_6() throws Exception {
+				state = 3;				
+				var3_filter.close(); var3_filter = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var3_filter.close(); var3_filter = null;
+				var2_if_is_filename_with_wildcard.close(); var2_if_is_filename_with_wildcard = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq34_filter implements IEnumerable
+	{
+		com.altova.mapforce.IMFNode var1_current;
+	
+		public seq34_filter(com.altova.mapforce.IMFNode var1_current)
+		{
+			this.var1_current = var1_current;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq34_filter closure;
+			IEnumerator var2_filter_elements_qname;
+			public Enumerator(seq34_filter closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("order", ""), closure.var1_current)).enumerator();
+				return false;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 2;				
+				if (!var2_filter_elements_qname.moveNext()) {state = 3; return false; }
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterAttributes(com.altova.functions.Core.createQName("CompanyName", ""), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current())))))) {state = 2; return false; }
+				current = var2_filter_elements_qname.current();
+				pos++;
+				return true;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 0;				
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq35_join implements IEnumerable
+	{
+		com.altova.mapforce.IMFNode var1_webservice;
+	
+		public seq35_join(com.altova.mapforce.IMFNode var1_webservice)
+		{
+			this.var1_webservice = var1_webservice;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq35_join closure;
+			com.altova.mapforce.IMFNode var2_webservice;
+			IEnumerator var3_filter_elements_qname;
+			IEnumerator var4_filter_elements_qname;
+			IEnumerator var5_filter;
+			public Enumerator(seq35_join closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+					case 4:	if (moveNext_4()) return true; break;
+					case 5:	if (moveNext_5()) return true; break;
+					case 6:	if (moveNext_6()) return true; break;
+					case 7:	if (moveNext_7()) return true; break;
+					case 8:	if (moveNext_8()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				current = com.altova.functions.Core.createElement("Column13", com.altova.functions.Core.box("Job #:"));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 3;				
+				var2_webservice = closure.var1_webservice;
+				var3_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Fault", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), var2_webservice)))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 5;				
+				if (!var3_filter_elements_qname.moveNext()) {state = 4; return false; }
+				var4_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("detail", ""), ((com.altova.mapforce.IMFNode)(var3_filter_elements_qname.current())))).enumerator();
+				return false;
+			}
+			private boolean moveNext_4() throws Exception {
+				state = 7;				
+				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
+				var5_filter = ((new seq36_filter(var2_webservice))).enumerator();
+				return false;
+			}
+			private boolean moveNext_5() throws Exception {
+				state = 5;				
+				if (!var4_filter_elements_qname.moveNext()) {state = 6; return false; }
+				com.altova.functions.Core.throwUserException(com.altova.CoreTypes.nodeToString(((com.altova.mapforce.IMFNode)(var4_filter_elements_qname.current()))));
+				return false;
+			}
+			private boolean moveNext_6() throws Exception {
+				state = 3;				
+				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
+				return false;
+			}
+			private boolean moveNext_7() throws Exception {
+				state = 7;				
+				if (!var5_filter.moveNext()) {state = 8; return false; }
+				current = com.altova.functions.Core.createElement("Column2", com.altova.functions.Core.box(com.altova.CoreTypes.nodeToString((com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("JobNumber", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), ((com.altova.mapforce.IMFNode)(var5_filter.current())))))))));
+				pos++;
+				return true;
+			}
+			private boolean moveNext_8() throws Exception {
+				state = 0;				
+				var5_filter.close(); var5_filter = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var4_filter_elements_qname.close(); var4_filter_elements_qname = null;
+				var3_filter_elements_qname.close(); var3_filter_elements_qname = null;
+				var5_filter.close(); var5_filter = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq36_filter implements IEnumerable
+	{
+		com.altova.mapforce.IMFNode var1_result;
+	
+		public seq36_filter(com.altova.mapforce.IMFNode var1_result)
+		{
+			this.var1_result = var1_result;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq36_filter closure;
+			IEnumerator var2_filter;
+			public Enumerator(seq36_filter closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				var2_filter = ((new seq37_filter(closure.var1_result))).enumerator();
+				return false;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 2;				
+				if (!var2_filter.moveNext()) {state = 3; return false; }
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("JobNumber", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), ((com.altova.mapforce.IMFNode)(var2_filter.current())))))))) {state = 2; return false; }
+				current = var2_filter.current();
+				pos++;
+				return true;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 0;				
+				var2_filter.close(); var2_filter = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var2_filter.close(); var2_filter = null;
+				}
+				catch (Exception e)
+				{
+				}
+			}
+		}
+				
+	}
+	static class seq37_filter implements IEnumerable
+	{
+		com.altova.mapforce.IMFNode var1_result;
+	
+		public seq37_filter(com.altova.mapforce.IMFNode var1_result)
+		{
+			this.var1_result = var1_result;
+		}
+
+		public IEnumerator enumerator() {return new Enumerator(this);}
+		
+		public static class Enumerator implements IEnumerator
+		{
+			int pos = 0;
+			int state = 1;
+			Object current;
+			seq37_filter closure;
+			IEnumerator var2_filter_elements_qname;
+			public Enumerator(seq37_filter closure) 
+			{
+				this.closure = closure;
+			}
+			
+			public Object current() {return current;}
+			
+			public int position() {return pos;}
+			
+			public boolean moveNext() throws Exception
+			{
+				while (state != 0)
+				{
+					switch (state) 
+					{
+					case 1:	if (moveNext_1()) return true; break;
+					case 2:	if (moveNext_2()) return true; break;
+					case 3:	if (moveNext_3()) return true; break;
+ 					}
+				}
+				return false;
+			}
+
+			private boolean moveNext_1() throws Exception {
+				state = 2;				
+				var2_filter_elements_qname = (com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResponse", "http://localhost/EnterpriseWebService/Enterprise Connect"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Body", "http://www.w3.org/2003/05/soap-envelope"), (com.altova.mapforce.IMFNode)com.altova.functions.Core.first(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("Envelope", "http://www.w3.org/2003/05/soap-envelope"), closure.var1_result)))))).enumerator();
+				return false;
+			}
+			private boolean moveNext_2() throws Exception {
+				state = 2;				
+				if (!var2_filter_elements_qname.moveNext()) {state = 3; return false; }
+				if (!(com.altova.functions.Core.exists(com.altova.functions.Core.filterElements(com.altova.functions.Core.createQName("SubmitOrderResult", "http://localhost/EnterpriseWebService/Enterprise Connect"), ((com.altova.mapforce.IMFNode)(var2_filter_elements_qname.current())))))) {state = 2; return false; }
+				current = var2_filter_elements_qname.current();
+				pos++;
+				return true;
+			}
+			private boolean moveNext_3() throws Exception {
+				state = 0;				
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
+				return false;
+			}
+
+			
+			public void close()
+			{
+				try
+				{
+				var2_filter_elements_qname.close(); var2_filter_elements_qname = null;
 				}
 				catch (Exception e)
 				{
@@ -2538,11 +3424,11 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 	}
 	static class Outer implements IEnumerable
 	{
-		com.altova.mapforce.IMFNode var1_instance_orderexport_334_557886823;
+		java.lang.String var1_InputFilename;
 	
-		public Outer(com.altova.mapforce.IMFNode var1_instance_orderexport_334_557886823)
+		public Outer(java.lang.String var1_InputFilename)
 		{
-			this.var1_instance_orderexport_334_557886823 = var1_instance_orderexport_334_557886823;
+			this.var1_InputFilename = var1_InputFilename;
 		}
 
 		public IEnumerator enumerator() {return new Enumerator(this);}
@@ -2553,7 +3439,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			int state = 1;
 			Object current;
 			Outer closure;
-			IEnumerator var2_box;
+			IEnumerator var2_seq_;
 			public Enumerator(Outer closure) 
 			{
 				this.closure = closure;
@@ -2579,19 +3465,19 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 			private boolean moveNext_1() throws Exception {
 				state = 2;				
-				var2_box = ((new main(closure.var1_instance_orderexport_334_557886823))).enumerator();
+				var2_seq_ = ((new main(closure.var1_InputFilename))).enumerator();
 				return false;
 			}
 			private boolean moveNext_2() throws Exception {
 				state = 2;				
-				if (!var2_box.moveNext()) {state = 3; return false; }
-				current = var2_box.current();
+				if (!var2_seq_.moveNext()) {state = 3; return false; }
+				current = var2_seq_.current();
 				pos++;
 				return true;
 			}
 			private boolean moveNext_3() throws Exception {
 				state = 0;				
-				var2_box.close(); var2_box = null;
+				var2_seq_.close(); var2_seq_ = null;
 				return false;
 			}
 
@@ -2600,7 +3486,7 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 			{
 				try
 				{
-				var2_box.close(); var2_box = null;
+				var2_seq_.close(); var2_seq_ = null;
 				}
 				catch (Exception e)
 				{
@@ -2613,52 +3499,51 @@ public class MappingMapToText_file extends com.altova.TraceProvider
 
 
 	// instances
-	protected org.w3c.dom.Node varorderexport_334_5578868232Instance;
+	protected String varInputFilename;
 
-	public void run(String orderexport_334_5578868232SourceFilename) throws Exception {
+	public void run(String InputFilenameSourceParameter, String Text_file2TargetFilename) throws Exception {
 		// open source streams
-		writeTrace("Loading " + orderexport_334_5578868232SourceFilename + "...\n");
-		com.altova.io.FileInput orderexport_334_5578868232Source = new com.altova.io.FileInput(orderexport_334_5578868232SourceFilename);
+		// open target stream
+		com.altova.io.FileOutput Text_file2Target = new com.altova.io.FileOutput(Text_file2TargetFilename);
 
 		// run
-		run(orderexport_334_5578868232Source);
+		run(InputFilenameSourceParameter, Text_file2Target);
 
 		// close source streams
-		orderexport_334_5578868232Source.close();
+		// close target stream
+		writeTrace("Saving " + Text_file2TargetFilename + "...\n");
+		Text_file2Target.close();
 	}
 
 
 	// main entry point
 
-	public void run(com.altova.io.Input orderexport_334_5578868232Source) throws Exception {
+	public void run(String InputFilenameSourceParameter, com.altova.io.Output Text_file2Target) throws Exception {
 		// Open the source(s)
-		org.w3c.dom.Document doc_orderexport_334_5578868232 = XmlTreeOperations.loadDocument(orderexport_334_5578868232Source);
-		varorderexport_334_5578868232Instance = doc_orderexport_334_5578868232;
-		if (runDoesCloseAll)
-			orderexport_334_5578868232Source.close();
+			varInputFilename = InputFilenameSourceParameter;
+
 
 		// Create the target
+		com.altova.text.tablelike.flf.Table Text_file2TargetDoc = new com.altova.text.tablelike.flf.Table(com.mapforce.Text_file.Text_file_TypeInfo.binder.getTypes()[com.mapforce.Text_file.Text_file_TypeInfo._altova_ti_altova_RowsType]);
+		com.altova.text.tablelike.Table Text_file2TargetObject = Text_file2TargetDoc;
+			Text_file2TargetDoc.getFormat().setFillCharacter( ' ' );
+			Text_file2TargetDoc.getFormat().setAssumeRecordDelimitersPresent( true );
+			Text_file2TargetDoc.getFormat().setRemoveEmpty( true );
 
 		// Execute mapping
 
-		main mapping = new main(new com.altova.xml.DOMDocumentAsMFNodeAdapter(varorderexport_334_5578868232Instance, orderexport_334_5578868232Source.getFilename()));
+		main mapping = new main(InputFilenameSourceParameter);
 
-		for (IEnumerator en = mapping.enumerator(); en.moveNext();)
-		{
-		  MFDocument doc = (MFDocument) en.current();
-		com.mapforce.Text_file.Text_fileDocument Text_file2TargetDoc = new com.mapforce.Text_file.Text_fileDocument(com.mapforce.Text_file.Text_file_TypeInfo.binder.getTypes()[com.mapforce.Text_file.Text_file_TypeInfo._altova_ti_altova_RowsType]);
-		com.altova.text.tablelike.Table Text_file2TargetObject = Text_file2TargetDoc;
-			Text_file2TargetDoc.getFormat().setAssumeFirstRowAsHeaders( false );
-			Text_file2TargetDoc.getFormat().setFieldDelimiter( ',' );
-			Text_file2TargetDoc.getFormat().setRemoveEmpty( true );
-			Text_file2TargetDoc.getFormat().setQuoteCharacter( '\"' );
-		  com.altova.io.Output Text_file2Target = new com.altova.io.FileOutput(doc.getFilename());
-		  com.altova.text.MFTextWriter.write(doc.select(IMFNode.MFQueryKind_All, null), Text_file2TargetObject);
+		com.altova.text.MFTextWriter.write(mapping, Text_file2TargetObject);
+		// Close the target
 		Text_file2TargetDoc.setEncoding( "UTF-8", false, false );
 		Text_file2TargetDoc.save(Text_file2Target);
-		  Text_file2Target.close();
-		}
 
+		
+		if (runDoesCloseAll)
+		{
+			Text_file2Target.close();
+		}
 	}
 
 

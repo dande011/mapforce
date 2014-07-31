@@ -6,7 +6,7 @@
 		<javac srcdir="." classpath="." />
 	</target>
 	<target name="test" depends="compile">
-		<java classpath="C:\Users\DavidAnderson\git\mapforce" classname="com.mapforce.MappingConsole" fork="true" failonerror="true">
+		<java classpath="C:\Users\DavidAnderson\Documents\test\output" classname="com.mapforce.MappingConsole" fork="true" failonerror="true">
 			<arg line="${cmdline}"/>
 		</java>
 	</target>
@@ -19,6 +19,6 @@
 		</delete>
 	</target>
 	<target name="jar" depends="compile">
-		<jar destfile="Mapping.jar" manifest="C:\Users\DavidAnderson\git\mapforce/META-INF/MANIFEST.MF" basedir="." includes="**/*.xml **/*.class **/*.png **/*.wsdl **/MANIFEST.MF" excludes="**/*.java"/>
+		<jar destfile="Mapping.jar" manifest="C:\Users\DavidAnderson\Documents\test\output/META-INF/MANIFEST.MF" basedir="." includes="**/*.xml **/*.class **/*.png **/*.wsdl **/MANIFEST.MF" excludes="**/*.java"/>
 	</target>
 </project>

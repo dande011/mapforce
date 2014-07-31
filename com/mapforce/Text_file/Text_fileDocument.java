@@ -17,30 +17,27 @@ package com.mapforce.Text_file;
 import com.altova.text.tablelike.ColumnSpecification;
 import com.altova.text.tablelike.Header;
 import com.altova.text.tablelike.ISerializer;
-import com.altova.text.tablelike.csv.Table;
-import com.altova.text.tablelike.csv.Serializer;
+import com.altova.text.tablelike.MappingException;
+import com.altova.text.tablelike.Table;
+import com.altova.text.tablelike.flf.Serializer;
 
 public class Text_fileDocument extends Table
 {
 	protected ISerializer createSerializer()
 	{
 		Serializer result= new Serializer(this);
-		result.getFormat().setAssumeFirstRowAsHeaders(false);
-		result.getFormat().setFieldDelimiter(',');
-		
-		result.getFormat().setQuoteCharacter('\"');
-		
+		result.getFormat().setAssumeRecordDelimitersPresent(true);
+		result.getFormat().setFillCharacter(' ');
 		result.getFormat().setRemoveEmpty(true);
 		return result;
 	}
 	protected void initHeader(Header header)
 	{
 		
-		header.add(new ColumnSpecification("Field1"));
+		header.add(new ColumnSpecification("Column13", 15));
+		header.add(new ColumnSpecification("Column2", 60));
 	}
-	public Text_fileDocument(com.altova.typeinfo.TypeInfo tableType) {
-        super( tableType);
-    }
+	public Text_fileDocument() {}
 }
 
 

@@ -20,14 +20,25 @@ public class MappingConsole {
 
 	public static void main(String[] args) {
 		System.out.println("Mapping Application");
-		for (String argTest : args)
-		{
-			System.out.print("argument: ");
-			System.out.println(argTest);
-		}
-		//temp
-		String directory = "NULL in MappingConsole main";
 
+		java.util.Hashtable	mapArguments = new java.util.Hashtable();
+		if( args.length <= 1 )	{
+			System.out.println();
+			System.out.println( "WARNING: No parameters given!");
+			System.out.println( "SYNTAX: java com.mapforce.MappingConsole /InputFilename ... ");
+			System.out.println( "SYNTAX: ant -Dcmdline=\"/InputFilename ... \"");
+			System.out.println( "Note: If you want to use spaces as values write them in-between double quotes." );
+			System.out.println();
+		}
+		else
+		{
+			for( int i = 0; i < args.length; i++ )
+			{
+				String sName = args[ i ];
+				if( sName.substring( 0, 1 ).equals( "/" )  &&  ( i + 1 ) < args.length )
+					mapArguments.put( sName.substring( 1, sName.length() ), args[ ++i ] );
+			}
+		}
 
 		try { // Mapping
 			TraceTargetConsole ttc = new TraceTargetConsole();
@@ -40,6 +51,11 @@ public class MappingConsole {
 
 			MappingMapToText_fileObject.registerTraceTarget(ttc);
 	
+			if(!mapArguments.containsKey("InputFilename"))
+			{
+				System.out.println("Missing argument InputFilename");
+				System.exit(1);
+			}
 
 			// run mapping
 			//
@@ -70,10 +86,11 @@ public class MappingConsole {
 			// MappingMapToText_fileObject.setCloseObjectsAfterRun(false);
 
 			{
-				com.altova.io.Input orderexport_334_5578868232Source = com.altova.io.StreamInput.createInput(directory);
+				com.altova.io.Output Text_file2Target = new com.altova.io.FileOutput("Output Text File.txt");
 
 				MappingMapToText_fileObject.run(
-						orderexport_334_5578868232Source);
+						com.altova.CoreTypes.castToString((String)mapArguments.get("InputFilename")),
+						Text_file2Target);
 			}
 
 
