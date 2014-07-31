@@ -1,0 +1,7 @@
+Test file on linux:
+/home/davey/git/mapforce/DaveyTestOrder.xml
+
+
+\\wevserver\WS_Order_XML\Job Order
+\\webserver\WS_Order_XML\Job Order\Processed with Job Ticket
+\\webserver\WS_Order_XML\Job Order\ORDERS NOT PROCESSED

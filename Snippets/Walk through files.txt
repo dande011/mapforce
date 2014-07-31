@@ -1,0 +1,7 @@
+set directory
+
+Files.walk(Paths.get(directory),1).forEach(filePath ->{
+	if(Files.isRegularFile(filePath) && filepath.to.string().toLowerCase().endswith(".xml")){
+		/* do things with filePath */
+	}
+});

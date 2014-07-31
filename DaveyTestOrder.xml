@@ -1,0 +1,214 @@
+<order OrderID="331" IP="10.0.0.blah" InvoiceID="" PaymentTransactionID="" PaymentTerms="" IsPaid="maybe?" OrderField1="" OrderField2="" OrderField3="" OrderField4="" OrderField5="" OrderField6="" OrderField7="" OrderField8="" OrderField9="" OrderField10="" SalesPerson="Me :-)" AccountManager="0000" AccountField1="0000" AccountField2="" AccountField3="" AccountField4="" AccountField5="" PrintProviderID="5" PrintProviderName="Central Coast Printing" DisplayCurrency="USD" DisplayCurrencyRate="1" price="00.00" urgency="0" tax="00.00" total="00.00" OrderDate="2012/3/16 11:13:10" OrderDateISO="2012-03-16T11:13:09-07:00" id="331" taxRate="0" PaymentMethod="Favors" PaymentMethodCode="po" POnumber="" ExpirationDate="" InternalNote="" InternalReferenceCode="" RefQuoteID="" LastFollowUp="" LostTo="" LostToPrice="" Name="Please delete this order" NextFollowUp="" Numerator="OSR276" ReceivedAs="" CustomerID="0" customerTaxPackage="" customername="" customerDiscountRate="0" ExternalCustomerID="" CustomerName="Davey" CustomerNote="" OrderIP="65.116.143.227" LoginName="asdf" FirstName="Davey" LastName="Anderson" DepartmentID="" DepartmentName="" UserID="1151" ExternalUserID="" Email="asdf" JobTitle="2028" Phone="805.458.8783" Mobile="" Fax="" CompanyName="Rabobank, NA" CSRId="" RequestedDate="2012/3/23 11:30:0" RequiredDateISO="2012-03-23T11:30:00-07:00">
+	<userContactAddress AddressID="3710" CustomerID="25" UserID="1151" ContactTypeID="2" ContactGroupID="3" AddressID1="3710" CompanyName="Rabobank, NA" DepartmentName="" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" AddressNotes="" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Mobile="" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" ExtendedAddress="" JobTitle="2028" Fax="" ContactField1="" ContactField2="" ContactField3="" ContactField4="" ContactField5="" AddressField1="" AddressField2="" AddressField3="" AddressField4="" AddressField5="" UserID1="1151" LoginName="sandra.guerrero@rabobank.com" Password="0HlMrhDufhyO4NxbYxEKxY6bZy4nBagsPPSMH5P6Jlo=" FirstName1="Sandra" LastName1="Guerrero" PrivilegeID="40" CustomerID1="25" IpFilter="" Language="" ProfitCenter="" DepartmentID="" CostCenterID="" UserRefID="" ShippingAddressID="3710" BillingAddressID="" CatalogID="" PasswordExpirationDate="" TemplateViewTypeID="0" RootCategoryID="0" StartPageTypeID="0" UserTypeID="" UserStatusID="1" PasswordModificationDate="3/13/2012 4:55:41 PM" IID="" AllCostCenters="-1" IsDeleted="0" IsDeleted1="0"/>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="5.02" adjustedPrice="5.02" discount="0" customerPrice="5.02" urgencyRate="0" urgencyPrice="0" totalNoTax="5.02" taxRate="0.0775" tax="0.389" taxName="Tax" total="5.409" shippingPrice="0" totalWithShipping="5.409" currency="$" copies="1" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/04/09" TemplateRefCode="MKT-014" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-014 Rev. 05/10 (package of 50) $5.02 per package" TemplateID="409" ExternalTemplateID="" priceOrigin="" id="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2594" jobType="Rabobank Inventory" jobTypeID="1764" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="278" InventoryMinCopies="25" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="409" templateName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package" templateISBN="FINGOOD" OmniumJobHash="7601E9932A89308FCC6B74EAA16CEDFDB4A17D1D" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems>
+			<priceLineItem itemType="Inventory" itemDescription="MKT-014 Rev. 05/10 (package of 50) price (from inventory)" itemID="3602" itemQuantity="1" itemUnits="copies" itemCost="0.0000" itemPrice="5.02"/>
+		</priceLineItems>
+		<JBF pageSizeJBF="Page Size Options" width="6.375" height="3.5">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="6.375" height="3.5" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="6.375" PdfFlatHeight="3.5"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="3" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2594/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2484" ProductID="2594" AddressID="5506" Copies="1" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="5.1309913795597E-03" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="5.02" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="5.02" adjustedPrice="5.02" discount="0" customerPrice="5.02" urgencyRate="0" urgencyPrice="0" totalNoTax="5.02" taxRate="0.0775" tax="0.389" taxName="Tax" total="5.409" shippingPrice="0" totalWithShipping="5.409" currency="$" copies="1" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/04/19" TemplateRefCode="MKT-014S" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-014S Rev. 08/10 (package of 50) $5.02 per package" TemplateID="419" ExternalTemplateID="" priceOrigin="" id="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2595" jobType="Rabobank Inventory" jobTypeID="1774" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="118" InventoryMinCopies="25" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="419" templateName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package" templateISBN="FINGOOD" OmniumJobHash="9796A73FFBBFB522A80737E304F6FAE2AB08EF31" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems>
+			<priceLineItem itemType="Inventory" itemDescription="MKT-014S Rev. 08/10 (package of 50) price (from inventory)" itemID="3603" itemQuantity="1" itemUnits="copies" itemCost="0.0000" itemPrice="5.02"/>
+		</priceLineItems>
+		<JBF pageSizeJBF="Page Size Options" width="6.375" height="3.5">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="6.375" height="3.5" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="6.375" PdfFlatHeight="3.5"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="4" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2595/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2485" ProductID="2595" AddressID="5506" Copies="1" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="5.1309913795597E-03" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="5.02" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="7.38" adjustedPrice="7.38" discount="0" customerPrice="7.38" urgencyRate="0" urgencyPrice="0" totalNoTax="7.38" taxRate="0.0775" tax="0.572" taxName="Tax" total="7.952" shippingPrice="0" totalWithShipping="7.952" currency="$" copies="1" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/04/18" TemplateRefCode="MKT-010" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-010  Rev. 12/10 (package of 25) $7.38 per package" TemplateID="418" ExternalTemplateID="" priceOrigin="" id="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2596" jobType="Rabobank Inventory" jobTypeID="1773" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="288" InventoryMinCopies="25" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="418" templateName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package" templateISBN="FINGOOD" OmniumJobHash="983715677646EC1040A01DB247BF4B6E4407B9CD" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems>
+			<priceLineItem itemType="Inventory" itemDescription="MKT-010  Rev. 12/10 (package of 25) price (from inventory)" itemID="3601" itemQuantity="1" itemUnits="copies" itemCost="0.0000" itemPrice="7.38"/>
+		</priceLineItems>
+		<JBF pageSizeJBF="Page Size Options" width="7.39" height="8.5">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="7.39" height="8.5" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="7.39" PdfFlatHeight="8.5"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="1" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2596/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2486" ProductID="2596" AddressID="5506" Copies="1" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="1.44449623980747E-02" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="7.38" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="5.86" adjustedPrice="5.86" discount="0" customerPrice="5.86" urgencyRate="0" urgencyPrice="0" totalNoTax="5.86" taxRate="0.0775" tax="0.4541" taxName="Tax" total="6.3141" shippingPrice="0" totalWithShipping="6.3141" currency="$" copies="1" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/04/23" TemplateRefCode="MKT-021" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-021 Rev. 08/09 (package of 50) $5.86 per package" TemplateID="423" ExternalTemplateID="" priceOrigin="" id="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2597" jobType="Rabobank Inventory" jobTypeID="1778" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="294" InventoryMinCopies="50" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="423" templateName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package" templateISBN="FINGOOD" OmniumJobHash="A43941AD1FF6EF09A67FE315377DB7B28AC12454" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems>
+			<priceLineItem itemType="Inventory" itemDescription="MKT-021 Rev. 08/09 (package of 50) price (from inventory)" itemID="3608" itemQuantity="1" itemUnits="copies" itemCost="0.0000" itemPrice="5.86"/>
+		</priceLineItems>
+		<JBF pageSizeJBF="Page Size Options" width="11" height="8.5">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="11" height="8.5" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="11" PdfFlatHeight="8.5"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="4" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2597/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2487" ProductID="2597" AddressID="5506" Copies="1" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="2.15012972095835E-02" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="5.86" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="0" adjustedPrice="0" discount="0" customerPrice="0" urgencyRate="0" urgencyPrice="0" totalNoTax="0" taxRate="0" tax="0" taxName="Tax" total="0" shippingPrice="0" totalWithShipping="0" currency="$" copies="2" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/05/06" TemplateRefCode="MKT-050S" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package" TemplateID="506" ExternalTemplateID="" priceOrigin="" id="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2598" jobType="Rabobank Inventory" jobTypeID="1863" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="186" InventoryMinCopies="25" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="506" templateName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package" templateISBN="FINGOOD" OmniumJobHash="45C0128279E9C581B8D504D3940B7622ADB8546B" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems/>
+		<JBF pageSizeJBF="Page Size Options" width="6" height="9">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="6" height="9" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="6" PdfFlatHeight="9"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="2" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2598/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2488" ProductID="2598" AddressID="5506" Copies="2" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="2.48357229800537E-02" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="0" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="0" adjustedPrice="0" discount="0" customerPrice="0" urgencyRate="0" urgencyPrice="0" totalNoTax="0" taxRate="0" tax="0" taxName="Tax" total="0" shippingPrice="0" totalWithShipping="0" currency="$" copies="1" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/05/37" TemplateRefCode="MKT-026" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-026 Rev. 02/12 (package of 50) $2.22 per package" TemplateID="537" ExternalTemplateID="" priceOrigin="" id="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2599" jobType="Rabobank Inventory" jobTypeID="2019" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="149" InventoryMinCopies="50" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="537" templateName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package" templateISBN="FINGOOD" OmniumJobHash="20424896143E3529078664BE0BF8EFDAAB04C887" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems/>
+		<JBF pageSizeJBF="Page Size Options" width="3.687" height="8.50499">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="3.687" height="8.50499" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="3.687" PdfFlatHeight="8.50499"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="0" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2599/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2489" ProductID="2599" AddressID="5506" Copies="1" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="7.21107473327243E-03" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="0" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+	<job isPriceNA="False" isCostNA="False" cost="0" price="0" adjustedPrice="0" discount="0" customerPrice="0" urgencyRate="0" urgencyPrice="0" totalNoTax="0" taxRate="0" tax="0" taxName="Tax" total="0" shippingPrice="0" totalWithShipping="0" currency="$" copies="1" CustomerRefCode="" UserID="1151" ExternalUserID="" CurrencyCode="USD" hasIform="false" hasVardata="false" vardataCount="0" hasFolding="false" NoteFromCustomer="" InternalNote="" ProductionNote="" FinishingNote="" TemplatePath="D:/Newedition/ipanel/jobtemplates/t00/05/34" TemplateRefCode="MKT-072" TemplateSubject="" TemplateISBN="FINGOOD" template="MKT-072  Rev. 11/11 (package of 50) $22.21 per package" TemplateID="534" ExternalTemplateID="" priceOrigin="" id="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" jobPath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2600" jobType="Rabobank Inventory" jobTypeID="1947" jobSubType="" jobSubtypeID="" HasInventory="true" InventoryAction="PrintFromInventory" InventoryPrinterCopies="0" InventoryCustomerCopies="73" InventoryMinCopies="50" InventoryLocation="" jobTypeName="Rabobank Inventory" jobsubtypename="" templateID="534" templateName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package" templateISBN="FINGOOD" OmniumJobHash="F6AAC1BFF58D04AAB6D52ADE3B43ED01B8DFD137" OmniumOrderHash="101ABE889EB3B329EC44970B5F8E22857F55AE80" OmniumJobPath="">
+		<priceLineItems/>
+		<JBF pageSizeJBF="Page Size Options" width="8.75347" height="3.90924">
+			<joblets>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Color" jbfPropertyValue="4 Color (CMYK)"/>
+				<joblet jobletName="Colors &amp; Sides" jbfPropertyCaption="Sides" jbfPropertyValue="Prints on 2 Sides"/>
+				<joblet jobletName="Number of Pages" jbfPropertyCaption="Number of pages in your job" jbfPropertyValue="Range 1-36"/>
+				<joblet jobletName="Paper" jbfPropertyCaption="Paper" jbfPropertyValue="100lb Prodigital Silk Book 12x18"/>
+			</joblets>
+		</JBF>
+		<flatPage count="2" width="8.75347" height="3.90924" size="custom" sides="TwoSidedHeadToHead" PdfFlatCount="2" PdfFlatWidth="8.75347" PdfFlatHeight="3.90924"/>
+		<channels colorGroup="process" blackCount="0" processCount="4" spotCount="0" PdfBlackColorCount="0" PdfProcessColorCount="4" PdfSpotColorCount="0" PdfBlackAndWhitePages="" PdfBlackAndWhitePagesList="" PdfColorPages="1,2" PdfColorPagesList="1-2"/>
+		<production outputDevice="" printQuality="Custom" pressSheetCount="0" pressSheetActualCount="0" imposedFilePath="D:/Newedition/ipanel/profiles/business/customers/25/jobs/flex14057-2600/imposition_layout.pdf"/>
+		<paper quality="custom" category="Uncoated" texture="Smooth" brand="Prodigital" color="White" weight="148" stockItemID="17" backCoatingName="Silk" frontCoatingName="Silk" catalogID="stock-17" gradeName="Coated Book" inStock="-1" mediaSetCount="" mediaTypeDetailsName="" mediaTypeName="Paper" parentSizeName="12 x 18" printProviderStockGroupID="27" stockItemName="100lb Prodigital Silk Book 12x18" thickness="357" vendorName="Spicers Paper"/>
+		<shipping DeliveryID="2490" ProductID="2600" AddressID="5506" Copies="1" ShippingMethod="Standard Shipping (UPS Ground 1-4 days)" ShippingWeight="7.8691103059183E-03" ShippingPrice="0" RequiredDate="3/23/2012 11:30:00 AM" CarrierCode="UPS" CarrierName="UPS" StatusID="190" ShippedDate="3/16/2012 11:13:40 AM" ShippingMethodId="4" ShippingJobPrice="0" ShippingTax="0" AddressID1="5506" CompanyName="Rabobank, NA" Street="905 Guadalupe Street" City="Guadalupe" State="CA" ZipCode="93434" Country="United States" FirstName="Sandra" LastName="Guerrero" Phone="805.343.5467" Email="sandra.guerrero@rabobank.com" AddressName="Sandra Guerrero" JobTitle="2028" ShippingMethodId1="4" CarrierId="46" MethodDescription="Standard Shipping (UPS Ground 1-4 days)" Markup="1" HandlingFee="0" PricingModel="Manual" PricingModelSource="Price was calculated using Job Template pricing definitions" ConfigurationGroupID="24" OnlineLineItemID="1828" IsDeleted="0" RequiredDateISO="2012-03-23T11:30:00-07:00" ShippedDateISO="2012-03-16T11:13:39-07:00" StatusName="ready for shipping"/>
+		<billing/>
+		<orderPriceLineItems>
+			<orderPriceLineItem rateId="0" adjustedPrice="23.28" customerPrice="23.28" discount="0" urgencyPrice="0" totalNoTax="23.28" taxName="Tax" tax="1.8042" total="25.0842" allJobsPrices="-1" shippingPrice="0" totalWithShipping="25.0842">
+				<jobs jobId="2594" jobName="MKT-014 Rev. 05/10 (package of 50) $5.02 per package #2594" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2595" jobName="MKT-014S Rev. 08/10 (package of 50) $5.02 per package #2595" price="5.02" cost="0" copies="1"/>
+				<jobs jobId="2596" jobName="MKT-010  Rev. 12/10 (package of 25) $7.38 per package #2596" price="7.38" cost="0" copies="1"/>
+				<jobs jobId="2597" jobName="MKT-021 Rev. 08/09 (package of 50) $5.86 per package #2597" price="5.86" cost="0" copies="1"/>
+				<jobs jobId="2598" jobName="MKT-050S  Rev. 03/10 (package of 25) $7.72 per package #2598" price="0" cost="0" copies="2"/>
+				<jobs jobId="2599" jobName="MKT-026 Rev. 02/12 (package of 50) $2.22 per package #2599" price="0" cost="0" copies="1"/>
+				<jobs jobId="2600" jobName="MKT-072  Rev. 11/11 (package of 50) $22.21 per package #2600" price="0" cost="0" copies="1"/>
+				<taxes taxName="SLO City Tax" taxId="0" percentage="7.75" subTotal="23.28" price="1.8042"/>
+			</orderPriceLineItem>
+		</orderPriceLineItems>
+	</job>
+</order>

@@ -1,0 +1,6 @@
+Mapping Application
+24:	new MappingFrame();
+
+MappingFrame
+169:	new MappingMapToText_File();
+213:	MappingMapToText_fileObject.run
